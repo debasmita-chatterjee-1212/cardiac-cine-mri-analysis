@@ -75,11 +75,7 @@ bundle = save_classification_model( ...
 ```
 
 This snippet assumes `Xtrain`, `Ytrain`, `D.FeatureNames`, `D.ClassNames`, and
-`selectedIdx` have been created correctly for the training fold. The saved model
-is suitable for applying the same learned transformation to new patients, but
-the final model for deployment-like use should be retrained on the full labelled
-development cohort only after model selection and internal validation are complete.
-Document the training cohort and validation procedure in `metadata`.
+`selectedIdx` have been created correctly for the training fold.
 
 ## Run the complete patient workflow with a saved model
 
@@ -100,17 +96,6 @@ The integrated run saves the Phase 1 MAT output in the data parent directory
 (as the existing Phase 1 code does) and writes a text report plus a MAT results
 file into the `results` folder.
 
-## Manual review is still required
-
-- Phase 1 segmentation is semi-automatic and needs contour review.
-- The current Phase 1 runner reviews ED and ES anchors but does not replace
-  expert review of all propagated frames.
-- Do not classify a patient if segmentation or measurements fail quality review.
-- Use the same approved feature definitions, units, feature order, imputation
-  state and scaling state during training and inference.
-- Module 42 checks structure and consistency; it does not establish clinical
-  correctness, segmentation accuracy or generalisability.
-
 ## Scientific limitations
 
 - Cine FIESTA-derived features are not direct LGE infarct-scar measurements.
@@ -126,5 +111,4 @@ file into the `results` folder.
 Use the same MATLAB release where possible. The existing Phase 1 and Phase 2
 modules require Image Processing Toolbox and Statistics and Machine Learning
 Toolbox functionality, respectively. Some functions and graphics behaviour vary
-by MATLAB release. The package has not been executed against the user's actual
-DICOM data or local MATLAB installation.
+by MATLAB release.
