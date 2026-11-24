@@ -1,0 +1,13 @@
+CARDIAC MRI STUDY — PHASE 3 QUICK START
+
+1. Keep Phase 1, Phase 2 and Phase 3 folders together.
+2. Add all source folders to MATLAB path (see README.md).
+3. Ensure Phase 1 has been tested on real cases and segmentation manually reviewed.
+4. To run processing only:
+   result = run_integrated_patient('0912','YOUR_DATA_PARENT_FOLDER','',2,11,3,12);
+5. To run classification, first create a saved model bundle using
+   save_classification_model, then pass its MAT filename as argument 3.
+6. Inspect result.ReportFile and the results folder.
+
+The frame numbers are examples only. The code is a research starter framework,
+not a clinically validated diagnostic system.
