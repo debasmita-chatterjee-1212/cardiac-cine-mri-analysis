@@ -1,7 +1,7 @@
-# Cardiac MRI Study — Phase 2 MATLAB Classification Code Set (Codes 10–36)
+# Cardiac MRI Study — Phase 2 MATLAB Classification Code Set
 
-This package is a **research starter framework** for exploratory patient-level binary classification
-(Healthy vs MI) using cine-MRI-derived features. It is not a clinically validated diagnostic tool.
+This package is a research framework for exploratory patient-level binary classification
+(Healthy vs MI) using cine-MRI-derived features.
 
 ## Requirements
 - MATLAB with Statistics and Machine Learning Toolbox.
@@ -91,4 +91,3 @@ mdl = train_logistic_regression(Xtr,D.Y(tr));
 - 2CH/4CH area features are not full 3D LV volumes and FAC is not EF.
 - MI labels should be confirmed by the clinical team and label definitions documented.
 - Consider MI subtype, infarct timing, comorbidities, acquisition differences and site effects in interpretation.
-- No model should be used for patient care without substantial external validation and regulatory/clinical review.
