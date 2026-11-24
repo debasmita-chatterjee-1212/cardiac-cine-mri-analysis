@@ -3,6 +3,7 @@
 Image Processing | Machine Learning | Biomedical Engineering | MATLAB
 
 WMG Summer Research Internship 2022
+
 WMG, University of Warwick, England
 
 *A MATLAB-based pipeline for left ventricular segmentation, functional feature extraction and machine learning classification.*
@@ -118,7 +119,3 @@ This project is intended for exploratory research rather than clinical diagnosis
 Fractional area change is an area-based measurement and should not be interpreted as volumetric ejection fraction.
 
 Patient imaging data and clinical records are not included in this repository.
-
-## License
-
-To be determined based on project ownership and institutional permissions.
