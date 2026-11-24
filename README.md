@@ -2,7 +2,7 @@
 
 Image Processing | Machine Learning | Biomedical Engineering | MATLAB
 
-WMG Summer Research Internship — 2022
+WMG Summer Research Internship 2022
 WMG, University of Warwick, England
 
 *A MATLAB-based pipeline for left ventricular segmentation, functional feature extraction and machine learning classification.*
