@@ -1,0 +1,23 @@
+# Confidential medical imaging data
+*.dcm
+*.dicom
+*.DCM
+*.DICOM
+*.nii
+*.nii.gz
+
+# Confidential patient information
+raw_data/
+patient_data/
+clinical_data/
+DICOM/
+patient_reports/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Local IDE configurations
+.vscode/
+.idea/
