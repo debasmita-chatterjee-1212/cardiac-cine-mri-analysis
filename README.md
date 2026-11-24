@@ -16,6 +16,46 @@ The workflow combines medical image processing, semi-automatic segmentation, tem
 - Investigate differences in imaging-derived features between healthy and MI cohorts.
 - Develop and evaluate machine learning classifiers using patient-level validation.
 
+## Research Workflow
+
+```mermaid
+flowchart TD
+    A["Cardiac Cine-MRI<br/>2CH and 4CH DICOM Sequences"] --> B
+
+    subgraph P1["Phase 1 — Medical Image Processing"]
+        B["DICOM Import and Preprocessing"] --> C["LV Segmentation<br/>Chan–Vese Active Contours"]
+        C --> D["Temporal Tracking and Quality Control"]
+        D --> E["Quantitative Feature Extraction<br/>LV Area, FAC and Temporal Features"]
+    end
+
+    E --> F
+
+    subgraph P2["Phase 2 — Machine Learning"]
+        F["Patient-Level Feature Dataset"] --> G["Exploratory Statistical Analysis"]
+        G --> H["Feature Selection"]
+        H --> I["Logistic Regression"]
+        H --> J["Support Vector Machine"]
+        H --> K["Random Forest"]
+        I --> L["Model Evaluation"]
+        J --> L
+        K --> L
+    end
+
+    L --> M
+
+    subgraph P3["Phase 3 — Pipeline Integration"]
+        M["Integrated Processing and Inference"] --> N["Patient-Level Research Report"]
+    end
+
+    L --> O["Random Forest<br/>89.4% Held-Out Test Accuracy"]
+
+    style A fill:#e0f2fe,stroke:#0284c7,color:#0c4a6e
+    style P1 fill:#eff6ff,stroke:#60a5fa,color:#1e3a8a
+    style P2 fill:#f5f3ff,stroke:#a78bfa,color:#4c1d95
+    style P3 fill:#fff7ed,stroke:#fb923c,color:#7c2d12
+    style O fill:#dcfce7,stroke:#16a34a,color:#14532d
+```
+
 ## Methodology
 
 ### Phase 1 — Image Processing and Feature Extraction
