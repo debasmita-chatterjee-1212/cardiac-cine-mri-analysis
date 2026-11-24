@@ -30,7 +30,7 @@ After processing each subject and collecting `out.Features`:
 Join confirmed labels using a table with `PatientID` and `Diagnosis`.
 
 ## Scientific and operational cautions
-- This is a research starter pipeline, not a clinically validated or fully automatic segmentation system.
+- This is a research starter pipeline.
 - Confirm DICOM ordering and that each file represents one temporal frame; multi-frame DICOMs need a different importer.
 - The tracker propagates masks but can drift or leak into adjacent structures. Review every frame; expert contours on a subset are strongly recommended.
 - FAC is fractional area change, not ejection fraction. Two 2D views do not provide full 3D LV volumes.
@@ -39,4 +39,3 @@ Join confirmed labels using a table with `PatientID` and `Diagnosis`.
 - One patient must be one row. Never split frames from one patient across training and test data.
 - With approximately 20–50 subjects, model performance will be highly uncertain and exploratory.
 - Keep DICOMs and clinical labels on institution-approved secure storage. Do not place patient data in public Git repositories.
-- Validate on a few subjects first; do not batch-process the full cohort until import, segmentation, tracking and measurements are reviewed.
